@@ -1,0 +1,14 @@
+
+build/
+hex/
+dump/
+
+tools/elf2hex/elf2hex
+
+*.o
+*.hex
+*.dump
+*.elf
+
+*~
+\#*
