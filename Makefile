@@ -19,7 +19,10 @@ ELF2HEX=tools/elf2hex
 
 RISCV=riscv64-unknown-elf-
 
-COMPILER_ARGS= -march=rv32i -mabi=ilp32 -static -nostdlib -nostartfiles -mcmodel=medany
+# redefine with make argument if needed! this version has no multiplication
+ARCH ?= rv32i
+
+COMPILER_ARGS= -march=$(ARCH) -mabi=ilp32 -static -nostdlib -nostartfiles -mcmodel=medany
 OBJDUMP_ARGS = -D
 
 all: $(SOURCE_PATHS)
